@@ -50,4 +50,7 @@ export class RoleService {
         await this.roleRepository.save(role)
         return role
     }
+
+    //role-permission roles
+    async
 }

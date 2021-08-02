@@ -9,7 +9,7 @@ export class UserRepository extends Repository<User>{
 
 
         const query = this.createQueryBuilder('user');
-        const tasks = await query.getMany();
-        return tasks;
+        const users = await query.getMany();
+        return users;
     }
 }
