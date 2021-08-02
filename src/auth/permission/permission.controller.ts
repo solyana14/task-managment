@@ -30,7 +30,7 @@ export class PermissionController {
         return this.permissionService.deletePermission(id)
     }
 
-    @Patch('/:id/status')
+    @Patch('/:id')
     updatePermissionStatus(@Param('id') id: number,
         @Body() updateStatus: UpdateStatusDto): Promise<Permission> {
         const { status } = updateStatus

@@ -9,8 +9,8 @@ export class UserHasRoleRepository extends Repository<UserHasRole>{
     async getUserHasRole(): Promise<UserHasRole[]> {
 
 
-        const query = this.createQueryBuilder('user');
-        const tasks = await query.getMany();
-        return tasks;
+        const query = this.createQueryBuilder('UserHasRole');
+        const userHasRoles = await query.getMany();
+        return userHasRoles;
     }
 }

@@ -6,6 +6,7 @@ import { PermissionModule } from './permission/permission.module';
 import { UserHasRole } from './user-has-role/user-has-role.entity';
 import { UserHasRoleModule } from './user-has-role/user-has-role.module';
 import { UserHasRoleRepository } from './user-has-role/user-has-role.repository';
+import { RoleHasPermissionModule } from './role-has-permission/role-has-permission.module';
 @Module({
     imports: [
         TypeOrmModule.forFeature([UserHasRoleRepository]),
@@ -13,7 +14,8 @@ import { UserHasRoleRepository } from './user-has-role/user-has-role.repository'
         UserModule,
         RoleModule,
         PermissionModule,
-        UserHasRoleModule
+        UserHasRoleModule,
+        RoleHasPermissionModule,
     ]
 })
 export class AuthModule { }

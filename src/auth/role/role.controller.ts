@@ -29,7 +29,7 @@ export class RoleController {
         return this.roleService.deleteRole(id)
     }
 
-    @Patch('/:id/status')
+    @Patch('/:id')
     updateRoleStatus(@Param('id') id: number,
         @Body() updateStatus: UpdateStatusDto): Promise<Role> {
         const { status } = updateStatus

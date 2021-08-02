@@ -29,7 +29,7 @@ export class UserHasRoleController {
     //     return this.userHasRoleService.deleteUserHasRole(id)
     // }
 
-    @Patch('/:id/status')
+    @Patch('/:id')
     updateUserHasRoleStatus(@Param('id') id: number,
         @Body() updateStatusForRelationDto: UpdateStatusForRelationDto): Promise<UserHasRole> {
         const { status } = updateStatusForRelationDto

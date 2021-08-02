@@ -30,7 +30,7 @@ export class UserController {
         return this.userService.deleteUser(id)
     }
 
-    @Patch('/:id/status')
+    @Patch('/:id')
     updateUserStatus(@Param('id') id: number,
         @Body() updateStatus: UpdateStatusDto): Promise<User> {
         const { status } = updateStatus

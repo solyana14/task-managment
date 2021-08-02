@@ -32,7 +32,7 @@ export class TasksController {
         return this.tasksService.deleteTask(id)
     }
 
-    @Patch('/:id/status')
+    @Patch('/:id')
     updateTaskStatus(@Param('id') id: number,
         @Body() updateTaskstatusDto: UpdateTaskstatusDto): Promise<Task> {
         const { status } = updateTaskstatusDto
