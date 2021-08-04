@@ -7,8 +7,18 @@ import { UserHasRole } from './user-has-role/user-has-role.entity';
 import { UserHasRoleModule } from './user-has-role/user-has-role.module';
 import { UserHasRoleRepository } from './user-has-role/user-has-role.repository';
 import { RoleHasPermissionModule } from './role-has-permission/role-has-permission.module';
+import { PassportModule } from '@nestjs/passport'
+import { JwtModule } from '@nestjs/jwt'
+
 @Module({
     imports: [
+        // PassportModule.register({ defaultStrategy: 'jwt' }),
+        // JwtModule.register({
+        //     secret: 'SolisSecret',
+        //     signOptions: {
+        //         expiresIn: 3600,
+        //     }
+        // }),
         TypeOrmModule.forFeature([UserHasRoleRepository]),
 
         UserModule,
@@ -16,6 +26,7 @@ import { RoleHasPermissionModule } from './role-has-permission/role-has-permissi
         PermissionModule,
         UserHasRoleModule,
         RoleHasPermissionModule,
-    ]
+    ],
+
 })
 export class AuthModule { }

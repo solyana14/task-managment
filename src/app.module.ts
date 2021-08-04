@@ -6,8 +6,8 @@ import { RoleModule } from './auth/role/role.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [TasksModule,
-    // UserModule,
+  imports: [
+
     TypeOrmModule.forRoot({
       type: 'postgres',
       username: 'postgres',
@@ -21,6 +21,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     // RoleModule,
     AuthModule,
+    TasksModule
   ],
 
 
